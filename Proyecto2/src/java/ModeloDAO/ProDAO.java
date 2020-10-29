@@ -114,6 +114,39 @@ public class ProDAO {
         }
     }
     
+        public boolean add(Producto pr) {
+       String sql="insert into producto(nombre_pr, tipo_pr, cantidad_pr, precio_pr, FOTO)values('"+pr.getNombre()+"','"+pr.getTipo()+"','"+pr.getCantidad()+"','"+pr.getPrecio()+"','"+pr.getFoto()+"')";
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+       return false;
+    }
+
+    public boolean edit(Producto pr) {
+        String sql="update producto set nombre_pr='"+pr.getNombre()+"',tipo_pr='"+pr.getTipo()+"',cantidad_pr='"+pr.getCantidad()+"',precio_pr='"+pr.getPrecio()+"'where id_pr="+pr.getId();
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
+    }
+
+    public boolean eliminar(int id) {
+        String sql="delete from producto where id_pr="+id;
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+        return false;
+    }
+    
     
     
 }

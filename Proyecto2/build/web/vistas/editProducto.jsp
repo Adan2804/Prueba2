@@ -1,6 +1,6 @@
 
 <%@page import="Modelo.Producto"%>
-<%@page import="ModeloDAO.ProductoDAO"%>
+<%@page import="ModeloDAO.ProDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,9 +13,9 @@
         <div class="container">
             <div class="col-lg-6">
               <%
-              ProductoDAO dao=new ProductoDAO();
+              ProDAO dao=new ProDAO();
               int id=Integer.parseInt((String)request.getAttribute("idper"));
-              Producto p=(Producto)dao.list(id);
+              Producto p=(Producto)dao.listarId(id);
           %>
             <h1>Modificar Producto</h1>
             <form action="ControladorProducto">

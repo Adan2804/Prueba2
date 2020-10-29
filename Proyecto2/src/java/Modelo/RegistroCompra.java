@@ -9,20 +9,20 @@ public class RegistroCompra {
     double preciounidadventa;
     int cantidad;
     double subtotal;
-    Producto idproducto;
-    Compra idcompra;
+    Producto producto;
+    Compra compra;
 
     public RegistroCompra() {
     }
 
-    public RegistroCompra(String marca, double costounidadcompra, double preciounidadventa, int cantidad, double subtotal, Producto idproducto, Compra idcompra) {
+    public RegistroCompra(String marca, double costounidadcompra, double preciounidadventa, int cantidad, double subtotal, Producto producto, Compra compra) {
         this.marca = marca;
         this.costounidadcompra = costounidadcompra;
         this.preciounidadventa = preciounidadventa;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
-        this.idproducto = idproducto;
-        this.idcompra = idcompra;
+        this.producto = producto;
+        this.compra = compra;
     }
 
     public int getIdregistrocompra() {
@@ -73,20 +73,20 @@ public class RegistroCompra {
         this.subtotal = subtotal;
     }
 
-    public Producto getIdproducto() {
-        return idproducto;
+    public Producto getProducto() {
+        return producto;
     }
 
-    public void setIdproducto(Producto idproducto) {
-        this.idproducto = idproducto;
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 
-    public Compra getIdcompra() {
-        return idcompra;
+    public Compra getCompra() {
+        return compra;
     }
 
-    public void setIdcompra(Compra idcompra) {
-        this.idcompra = idcompra;
+    public void setCompra(Compra compra) {
+        this.compra = compra;
     }
 
 

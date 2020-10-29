@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ComprarDAO {
     
-     Conexion cn=new Conexion();
+    Conexion cn=new Conexion();
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
@@ -60,7 +60,7 @@ public class ComprarDAO {
     }
 
     public boolean add(Compra co) {
-       String sql="insert into compra(idcompra, proveedor, fecha, costototal, cantidadtotal)values('"+co.getIdcompra()+"','"+co.getProveedor()+"','"+co.getFecha()+"','"+co.getCostototal()+"','"+co.getCantidadtotal()+"')";
+       String sql="insert into compra(proveedor, fecha, costototal, cantidadtotal)values('"+co.getProveedor()+"','"+co.getFecha()+"','"+co.getCostototal()+"','"+co.getCantidadtotal()+"')";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

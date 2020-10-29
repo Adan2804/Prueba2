@@ -9,7 +9,6 @@ import Modelo.Producto;
 import Modelo.Empleado;
 import ModeloDAO.PedidoDAO;
 import ModeloDAO.ProDAO;
-import ModeloDAO.ProductoDAO;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,6 @@ import javax.servlet.http.HttpServletResponse;
 public class Controlador extends HttpServlet {
 
     ProDAO proD = new ProDAO();
-    ProductoDAO pdao = new ProductoDAO();
     Producto p = new Producto();
     List<Producto> productos = new ArrayList<>();
     List<Carrito> listaCarrito = new ArrayList<>();
