@@ -26,7 +26,7 @@ public class Controlador extends HttpServlet {
     List<Producto> productos = new ArrayList<>();
     List<Carrito> listaCarrito = new ArrayList<>();
 
-    //CompraDAO cdao = new CompraDAO();
+    //CompraDAO cdao = new PedidoDAO();
     //Cliente cl = new Cliente();
     Fecha fechaSistem = new Fecha();
     //Empleado em = new Empleado();
