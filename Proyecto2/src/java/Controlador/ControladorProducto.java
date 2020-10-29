@@ -7,7 +7,6 @@ package Controlador;
 
 import Modelo.Producto;
 import ModeloDAO.ProDAO;
-import ModeloDAO.ProductoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -27,7 +26,6 @@ public class ControladorProducto extends HttpServlet {
     String add="vistas/addProducto.jsp";
     String edit="vistas/editProducto.jsp";
     Producto p=new Producto();
-    ProductoDAO dao=new ProductoDAO();
     ProDAO im = new ProDAO();
     int id;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -66,7 +64,7 @@ public class ControladorProducto extends HttpServlet {
             p.setTipo(tip);
             p.setCantidad(can);
             p.setPrecio(pre);
-            dao.add(p);
+            im.add(p);
             acceso=listar;
         }
         else if(action.equalsIgnoreCase("editar")){
@@ -84,13 +82,13 @@ public class ControladorProducto extends HttpServlet {
             p.setTipo(tip);
             p.setCantidad(can);
             p.setPrecio(pre);
-            dao.edit(p);
+            im.edit(p);
             acceso=listar;
         }
         else if(action.equalsIgnoreCase("eliminar")){
             id=Integer.parseInt(request.getParameter("id"));
             p.setId(id);
-            dao.eliminar(id);
+            im.eliminar(id);
             acceso=listar;
         }
         RequestDispatcher vista=request.getRequestDispatcher(acceso);

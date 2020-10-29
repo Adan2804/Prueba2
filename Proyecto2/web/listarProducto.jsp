@@ -2,7 +2,7 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="Modelo.Producto"%>
 <%@page import="java.util.List"%>
-<%@page import="ModeloDAO.ProductoDAO"%>
+<%@page import="ModeloDAO.ProDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -283,7 +283,7 @@
                     </tr>
                 </thead>
                 <%
-                    ProductoDAO dao=new ProductoDAO();
+                    ProDAO dao=new ProDAO();
                     List<Producto>list=dao.listar();
                     Iterator<Producto>iter=list.iterator();
                     Producto pro=null;
