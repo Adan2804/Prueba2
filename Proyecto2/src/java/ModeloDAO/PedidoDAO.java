@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class CompraDAO {
+public class PedidoDAO {
 
     //Producto pr = new Producto();
     Conexion cn = new Conexion();
