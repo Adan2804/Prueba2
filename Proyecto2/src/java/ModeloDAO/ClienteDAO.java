@@ -7,9 +7,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import Intefaces.CLIENTECRUD;
 
-public class ClienteDAO implements CLIENTECRUD {
+public class ClienteDAO {
 
     Conexion cn = new Conexion();
     Connection con;
@@ -17,7 +16,6 @@ public class ClienteDAO implements CLIENTECRUD {
     ResultSet rs;
     Cliente cl = new Cliente();
 
-    @Override
     public List listar() {
         ArrayList<Cliente> list = new ArrayList<>();
         String sql = "select * from cliente";
@@ -40,7 +38,6 @@ public class ClienteDAO implements CLIENTECRUD {
         return list;
     }
 
-    @Override
     public Cliente list(int id) {
         String sql = "select * from cliente where id_c= " + id;
         try {
@@ -61,7 +58,6 @@ public class ClienteDAO implements CLIENTECRUD {
         return cl;
     }
 
-    @Override
     public boolean add(Cliente Cli) {
         String sql = "insert into cliente(dni_c, nombre_c, apellido_c, direccion_c, celular_c)values('" + Cli.getDni() + "','" + Cli.getNombre() + "','" + Cli.getApellido() + "','" + Cli.getDireccion() + "','" + Cli.getCelular() + "')";
         try {
@@ -73,7 +69,6 @@ public class ClienteDAO implements CLIENTECRUD {
         return false;
     }
 
-    @Override
     public boolean edit(Cliente Cli) {
         String sql = "update cliente set dni_c='" + Cli.getDni() + "',nombre_c='" + Cli.getNombre() + "',apellido_c='" + Cli.getApellido() + "',direccion_c='" + Cli.getDireccion() + "',celular_c='" + Cli.getCelular() + "' where id_c=" + Cli.getId();
         try {
@@ -86,7 +81,6 @@ public class ClienteDAO implements CLIENTECRUD {
         return false;
     }
 
-    @Override
     public boolean eliminar(int id) {
         String sql = "delete from cliente where id_c=" + id;
         try {
