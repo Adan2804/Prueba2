@@ -7,7 +7,7 @@ import Modelo.DetalleCompra;
 import Modelo.Pedido;
 import Modelo.Producto;
 import Modelo.Empleado;
-import ModeloDAO.CompraDAO;
+import ModeloDAO.PedidoDAO;
 import ModeloDAO.ProDAO;
 import ModeloDAO.ProductoDAO;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class Controlador extends HttpServlet {
     List<Producto> productos = new ArrayList<>();
     List<Carrito> listaCarrito = new ArrayList<>();
 
-    //CompraDAO cdao = new CompraDAO();
+    //CompraDAO cdao = new PedidoDAO();
     //Cliente cl = new Cliente();
     Fecha fechaSistem = new Fecha();
     //Empleado em = new Empleado();
@@ -208,7 +208,7 @@ public class Controlador extends HttpServlet {
                 Empleado empleado = new Empleado();
                 empleado.setId(1);
                 cliente.setId(1);
-                CompraDAO dao = new CompraDAO();
+                PedidoDAO dao = new PedidoDAO();
                 //Pedido m = new Pedido(cliente, idpago, accion, montopagar, accion, listaCarrito, empleado)
                 //Pedido compra = new Pedido(cliente, 1, Fecha.FechaBD(), totalPagar, "Cancelado", listaCarrito, empleado);
                 Pedido compra = new Pedido(cliente, 1, Fecha.FechaBD(), totalPagar, "Cancelado", empleado, listaCarrito);
