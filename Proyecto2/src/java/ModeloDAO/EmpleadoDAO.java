@@ -1,8 +1,6 @@
 package ModeloDAO;
 
-import Config.CADO;
 import Config.Conexion;
-import Intefaces.EMPLEADOCRUD;
 import Modelo.Empleado;
 import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
@@ -10,7 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmpleadoDAO implements EMPLEADOCRUD {
+public class EmpleadoDAO {
 
     Conexion cn = new Conexion();
     Connection con;
@@ -41,7 +39,6 @@ public class EmpleadoDAO implements EMPLEADOCRUD {
         return em;
     }
     
-    @Override
     public List listar() {
         ArrayList<Empleado> list = new ArrayList<>();
         String sql = "select * from empleado";
@@ -68,7 +65,6 @@ public class EmpleadoDAO implements EMPLEADOCRUD {
 
     }
 
-    @Override
     public Empleado list(int id) {
         String sql = "select * from empleado where Id_em= " + id;
         try {
@@ -92,7 +88,6 @@ public class EmpleadoDAO implements EMPLEADOCRUD {
         return emp;
     }
 
-    @Override
     public boolean add(Empleado Emp) {
         String sql = "insert into empleado(dni_em, nombre_em, apellido_em, celular_em, tipo_em, usuario_em, contra_em, email_em)values('" + Emp.getDni() + "','" + Emp.getNombre() + "','" + Emp.getApellido() + "','" + Emp.getCelular() + "','" + Emp.getTipo() + "','" + Emp.getUsuario() + "','" + Emp.getContra() + "','" + Emp.getEmail() + "')";
         try {
@@ -104,7 +99,6 @@ public class EmpleadoDAO implements EMPLEADOCRUD {
         return false;
     }
 
-    @Override
     public boolean edit(Empleado Emp) {
         String sql = "update empleado set nombre_em='" + Emp.getNombre() + "',apellido_em='" + Emp.getApellido() + "',celular_em='" + Emp.getCelular() + "',tipo_em='" + Emp.getTipo() + "',usuario_em='" + Emp.getUsuario() + "',contra_em='" + Emp.getContra()+ "',email_em='" + Emp.getEmail() +"',dni_em='" + Emp.getDni() +"' where id_em=" + Emp.getId();
         try {
@@ -117,7 +111,6 @@ public class EmpleadoDAO implements EMPLEADOCRUD {
         return false;
     }
 
-    @Override
     public boolean eliminar(int id) {
         String sql = "delete from empleado where id_em=" + id;
         try {
@@ -130,29 +123,5 @@ public class EmpleadoDAO implements EMPLEADOCRUD {
     }
     
 
- public bean.Empleado ValidarUsuario(String usu, String cla)
-    {
-        ResultSet rs;
-        String sql="SELECT * FROM empleado WHERE usuario_em ='" +
-                usu + "' AND contra_em = '" + cla + "'";
-        CADO ocado = new CADO();
-        rs = ocado.recuperar(sql);
-        try {
-            rs.beforeFirst();
-            if(rs.next()){
-                bean.Empleado ousuario = new bean.Empleado();
-                ousuario.setIdusuario(rs.getInt("id_em"));
-                ousuario.setNombrecompleto(rs.getString("nombre_em"));
-                ousuario.setLogin(rs.getString("usuario_em"));
-                ousuario.setClave(rs.getString("contra_em"));
-                return ousuario;
-            }
-            else{
-                return null;
-            }
-        } catch (Exception ex) {
-            return null;
-        }        
-    }    
 
 }

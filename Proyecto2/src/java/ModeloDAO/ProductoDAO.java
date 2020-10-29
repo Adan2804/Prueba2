@@ -2,7 +2,6 @@
 package ModeloDAO;
 
 import Config.Conexion;
-import Intefaces.PRODUCTOCRUD;
 import Modelo.Producto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,14 +9,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductoDAO implements PRODUCTOCRUD{
+public class ProductoDAO {
     Conexion cn=new Conexion();
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
     Producto p=new Producto();
     
-    @Override
     public List listar() {
         ArrayList<Producto>list=new ArrayList<>();
         String sql="select * from producto";
@@ -41,7 +39,6 @@ public class ProductoDAO implements PRODUCTOCRUD{
         return list;
     }
 
-    @Override
     public Producto list(int id) {
         String sql="select * from producto where id_pr="+id;
         try {
@@ -61,7 +58,6 @@ public class ProductoDAO implements PRODUCTOCRUD{
         return p;
     }
 
-    @Override
     public boolean add(Producto pr) {
        String sql="insert into producto(nombre_pr, tipo_pr, cantidad_pr, precio_pr, FOTO)values('"+pr.getNombre()+"','"+pr.getTipo()+"','"+pr.getCantidad()+"','"+pr.getPrecio()+"','"+pr.getFoto()+"')";
         try {
@@ -73,7 +69,6 @@ public class ProductoDAO implements PRODUCTOCRUD{
        return false;
     }
 
-    @Override
     public boolean edit(Producto pr) {
         String sql="update producto set nombre_pr='"+pr.getNombre()+"',tipo_pr='"+pr.getTipo()+"',cantidad_pr='"+pr.getCantidad()+"',precio_pr='"+pr.getPrecio()+"'where id_pr="+pr.getId();
         try {
@@ -85,7 +80,6 @@ public class ProductoDAO implements PRODUCTOCRUD{
         return false;
     }
 
-    @Override
     public boolean eliminar(int id) {
         String sql="delete from producto where id_pr="+id;
         try {
@@ -96,50 +90,5 @@ public class ProductoDAO implements PRODUCTOCRUD{
         }
         return false;
     }
-    
-
-  /*public Producto listarId(int id) {
-        String sql = "select * from producto where id_pr=" + id;
-        Producto p = new Producto();
-
-        try {
-            con = cn.getConnnection();
-            ps = con.prepareStatement(sql);
-            rs = ps.executeQuery();
-            while (rs.next()) {
-                p.setId(rs.getInt(1));
-                p.setNombre(rs.getString(2));
-                p.setTipo(rs.getString(3));
-                p.setCantidad(rs.getInt(4));
-                p.setPrecio(rs.getDouble(5));
-                p.setFoto(rs.getBinaryStream(6));
-                
-            }
-        } catch (Exception e) {
-        }
-        return p;
-    }*/
-
-    /*public List listar1() {
-        List<Producto> productos = new ArrayList();
-        String sql = "select * from producto";
-        try {
-            con = cn.getConnnection();
-            ps = con.prepareStatement(sql);
-            rs = ps.executeQuery();
-            while (rs.next()) {
-                Producto p = new Producto();
-                p.setId(rs.getInt(1));
-                p.setNombre(rs.getString(2));
-                p.setTipo(rs.getString(3));
-                p.setPrecio(rs.getDouble(4));
-                p.setCantidad(rs.getInt(5));
-                productos.add(p);
-            }
-        } catch (Exception e) {
-        }
-        return productos;
-    }*/
-    
-    
+      
 }
