@@ -1,0 +1,18 @@
+SMAP
+listarCompra_jsp.java
+JSP
+*S JSP
+*F
++ 0 listarCompra.jsp
+listarCompra.jsp
+*L
+1,36:48
+37,7:85
+43,3:92
+46,4:95,3
+50:107
+51,2:108,3
+53,2:114
+55:116,3
+56,9:119
+*E

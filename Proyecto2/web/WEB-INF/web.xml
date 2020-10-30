@@ -32,6 +32,14 @@
         <servlet-name>ControladorIMG</servlet-name>
         <servlet-class>Controlador.ControladorIMG</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorCompra</servlet-name>
+        <servlet-class>Controlador.ControladorCompra</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorRegistrocompra</servlet-name>
+        <servlet-class>Controlador.ControladorRegistrocompra</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControladorCliente</servlet-name>
         <url-pattern>/ControladorCliente</url-pattern>
@@ -63,6 +71,14 @@
     <servlet-mapping>
         <servlet-name>ControladorIMG</servlet-name>
         <url-pattern>/ControladorIMG</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCompra</servlet-name>
+        <url-pattern>/ControladorCompra</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorRegistrocompra</servlet-name>
+        <url-pattern>/ControladorRegistrocompra</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
