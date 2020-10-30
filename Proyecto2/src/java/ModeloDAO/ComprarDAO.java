@@ -71,7 +71,7 @@ public class ComprarDAO {
     }
 
     public boolean edit(Compra co) {
-        String sql="update compra set proveedor='"+co.getProveedor()+"',fecha='"+co.getFecha()+"',costototal='"+co.getCostototal()+"',cantidadtotal='"+co.getCantidadtotal()+"' where idcompra="+co.getIdcompra();
+        String sql="update compra set proveedor='"+co.getProveedor()+"',fecha='"+co.getFecha()+"',costototal="+co.getCostototal()+",cantidadtotal="+co.getCantidadtotal()+" where idcompra="+co.getIdcompra();
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
