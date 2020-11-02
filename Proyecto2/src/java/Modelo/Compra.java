@@ -6,6 +6,7 @@ public class Compra {
     int idcompra;
     String proveedor;
     String fecha;
+    int cantidadtipos;
     double costototal;
     int cantidadtotal;
 
@@ -42,6 +43,14 @@ public class Compra {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
+    }
+
+    public int getCantidadtipos() {
+        return cantidadtipos;
+    }
+
+    public void setCantidadtipos(int cantidadtipos) {
+        this.cantidadtipos = cantidadtipos;
     }
 
     public double getCostototal() {

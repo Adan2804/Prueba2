@@ -3,27 +3,46 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ClienteDAO.java</file>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/index.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/listarRegistrocompra.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/DetalleCompra.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Carrito.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/listarProducto.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/error.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/listarEmpleado.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editRegistrocompra.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Producto.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/addCliente.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/addRegistrocompra.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editProducto.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Empleado.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/contactform/contactform.js</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ComprarDAO.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ProDAO.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Compra.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editCliente.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/ControladorCompra.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ClienteDAO.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/index.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/listarCompra.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Config/Fecha.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/addProducto.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/ControladorProducto.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/dni.jsp</file>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Producto.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/ControladorEmpleado.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/.gitignore</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Cliente.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/PedidoDAO.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/RegistroCompraDAO.java</file>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editProducto.jsp</file>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Empleado.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/.browserslistrc</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/mensaje.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/EmpleadoDAO.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/Controlador.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Config/Conexion.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/administrador.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/ControladorIngreso.java</file>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ComprarDAO.java</file>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ProDAO.java</file>
-            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Compra.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editCompra.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/addCompra.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/ControladorCliente.java</file>
         </group>
     </open-files>
 </project-private>
