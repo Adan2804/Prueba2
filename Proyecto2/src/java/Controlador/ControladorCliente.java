@@ -61,7 +61,7 @@ public class ControladorCliente extends HttpServlet {
             dao.add(c);
             acceso=listar;
         }
-        else if(action.equalsIgnoreCase("Agregar1")){
+        else if(action.equalsIgnoreCase("Registrar")){
             String dni=request.getParameter("txtDni");
             String nom=request.getParameter("txtNom");
             String ape=request.getParameter("txtApe");

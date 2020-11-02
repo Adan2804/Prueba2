@@ -25,12 +25,12 @@ public class ClienteDAO {
             rs = ps.executeQuery();
             while (rs.next()) {
                 Cliente cli = new Cliente();
-                cli.setDni(rs.getString("dni_c"));
-                cli.setNombre(rs.getString("nombre_c"));
-                cli.setApellido(rs.getString("apellido_c"));
-                cli.setDireccion(rs.getString("direccion_c"));
-                cli.setCelular(rs.getString("celular_c"));
-                cli.setId(rs.getInt("id_c"));
+                cli.setDni(rs.getString("dni_cl"));
+                cli.setNombre(rs.getString("nombre_cl"));
+                cli.setApellido(rs.getString("apellido_cl"));
+                cli.setDireccion(rs.getString("direccion_cl"));
+                cli.setCelular(rs.getString("celular_cl"));
+                cli.setId(rs.getInt("id_cl"));
                 list.add(cli);
             }
         } catch (Exception e) {
@@ -39,18 +39,18 @@ public class ClienteDAO {
     }
 
     public Cliente list(int id) {
-        String sql = "select * from cliente where id_c= " + id;
+        String sql = "select * from cliente where id_cl= " + id;
         try {
             con = cn.getConnection();
             ps = (PreparedStatement) con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                cl.setId(rs.getInt("id_c"));
-                cl.setDni(rs.getString("dni_c"));
-                cl.setNombre(rs.getString("nombre_c"));
-                cl.setApellido(rs.getString("apellido_c"));
-                cl.setDireccion(rs.getString("direccion_c"));
-                cl.setCelular(rs.getString("celular_c"));
+                cl.setId(rs.getInt("id_cl"));
+                cl.setDni(rs.getString("dni_cl"));
+                cl.setNombre(rs.getString("nombre_cl"));
+                cl.setApellido(rs.getString("apellido_cl"));
+                cl.setDireccion(rs.getString("direccion_cl"));
+                cl.setCelular(rs.getString("celular_cl"));
 
             }
         } catch (Exception e) {
@@ -59,7 +59,7 @@ public class ClienteDAO {
     }
 
     public boolean add(Cliente Cli) {
-        String sql = "insert into cliente(dni_c, nombre_c, apellido_c, direccion_c, celular_c)values('" + Cli.getDni() + "','" + Cli.getNombre() + "','" + Cli.getApellido() + "','" + Cli.getDireccion() + "','" + Cli.getCelular() + "')";
+        String sql = "insert into cliente(dni_cl, nombre_cl, apellido_cl, direccion_cl, celular_cl)values('" + Cli.getDni() + "','" + Cli.getNombre() + "','" + Cli.getApellido() + "','" + Cli.getDireccion() + "','" + Cli.getCelular() + "')";
         try {
             con = cn.getConnection();
             ps = (PreparedStatement) con.prepareStatement(sql);
@@ -70,7 +70,7 @@ public class ClienteDAO {
     }
 
     public boolean edit(Cliente Cli) {
-        String sql = "update cliente set dni_c='" + Cli.getDni() + "',nombre_c='" + Cli.getNombre() + "',apellido_c='" + Cli.getApellido() + "',direccion_c='" + Cli.getDireccion() + "',celular_c='" + Cli.getCelular() + "' where id_c=" + Cli.getId();
+        String sql = "update cliente set dni_cl='" + Cli.getDni() + "',nombre_cl='" + Cli.getNombre() + "',apellido_cl='" + Cli.getApellido() + "',direccion_cl='" + Cli.getDireccion() + "',celular_cl='" + Cli.getCelular() + "' where id_cl=" + Cli.getId();
         try {
             con = cn.getConnection();
             ps = (PreparedStatement) con.prepareStatement(sql);
@@ -82,7 +82,7 @@ public class ClienteDAO {
     }
 
     public boolean eliminar(int id) {
-        String sql = "delete from cliente where id_c=" + id;
+        String sql = "delete from cliente where id_cl=" + id;
         try {
             con = cn.getConnection();
             ps = (PreparedStatement) con.prepareStatement(sql);
@@ -91,5 +91,25 @@ public class ClienteDAO {
         }
         return false;
     }
-
+    
+      public Cliente check(String dni) {
+           Cliente cli = new Cliente();
+        String sql = "select * from cliente where dni_cl='"+dni+"'";
+        try {
+            con = cn.getConnection();
+            ps = (PreparedStatement) con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+               
+                cli.setDni(rs.getString("dni_cl"));
+                cli.setNombre(rs.getString("nombre_cl"));
+                cli.setApellido(rs.getString("apellido_cl"));
+                cli.setDireccion(rs.getString("direccion_cl"));
+                cli.setCelular(rs.getString("celular_cl"));
+                cli.setId(rs.getInt("id_cl"));
+            }
+        } catch (Exception e) {
+        }
+        return cli;
+    }
 }

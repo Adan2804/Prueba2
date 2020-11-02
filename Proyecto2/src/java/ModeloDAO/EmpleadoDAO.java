@@ -17,27 +17,30 @@ public class EmpleadoDAO {
     Empleado emp = new Empleado();
 
     
-     public Empleado validar(String usuario, String contra) {
-        Empleado em = new Empleado();
-        String sql = "select * from empleado where usuario_em=? and contra_em=?";
+     
+     public Empleado validar(String user, String contra) {
+        String sql = "select * from empleado where usuario_em= '" + user +"' AND contra_em= '"+contra+"'";
         try {
-
             con = cn.getConnection();
             ps = (PreparedStatement) con.prepareStatement(sql);
-            ps.setString(1, usuario);
-            ps.setString(2, contra);
             rs = ps.executeQuery();
-
             while (rs.next()) {
-                em.setId(rs.getInt("id_em"));
-                em.setUsuario(rs.getString("usuario_em"));
-                
-            }
+                emp.setId(rs.getInt("id_em"));
+                emp.setNombre(rs.getString("nombre_em"));
+                emp.setApellido(rs.getString("apellido_em"));
+                emp.setCelular(rs.getString("celular_em"));
+                emp.setTipo(rs.getString("tipo_em"));
+                emp.setUsuario(rs.getString("usuario_em"));
+                emp.setContra(rs.getString("contra_em"));
+                emp.setEmail(rs.getString("email_em"));
+                emp.setDni(rs.getString("dni_em"));
 
+            }
         } catch (Exception e) {
         }
-        return em;
+        return emp;
     }
+     
     
     public List listar() {
         ArrayList<Empleado> list = new ArrayList<>();

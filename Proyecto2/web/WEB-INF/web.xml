@@ -40,6 +40,10 @@
         <servlet-name>ControladorRegistrocompra</servlet-name>
         <servlet-class>Controlador.ControladorRegistrocompra</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Validar</servlet-name>
+        <servlet-class>Controlador.Validar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControladorCliente</servlet-name>
         <url-pattern>/ControladorCliente</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>ControladorRegistrocompra</servlet-name>
         <url-pattern>/ControladorRegistrocompra</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Validar</servlet-name>
+        <url-pattern>/Validar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

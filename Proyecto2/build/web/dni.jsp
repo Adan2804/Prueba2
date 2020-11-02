@@ -12,7 +12,7 @@
         <div class="container mt-4 col-lg-4">
             <div class="card">
                 <div class="car-body text-center">
-                    <form class="form-sign" action="ControladorIngreso">
+                    <form class="form-sign" action="Validar">
                         <div class="form-group">
                             <h3>BIENVENIDO!</h3>
                             <label>PIDE TU GAS</label>

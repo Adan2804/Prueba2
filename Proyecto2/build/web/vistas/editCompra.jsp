@@ -23,14 +23,16 @@
                     <input class="form-control" type="text" name="txtPro" value="<%=c.getProveedor()%>"><br>
                     Fecha: <br>
                     <input class="form-control" type="text" name="txtFec" value="<%=c.getFecha()%>"><br>
+                    Cantidad Tipos: <br>
+                    <input class="form-control" type="text" name="txtFec" value="<%=c.getCantidadtipos()%>"><br>
                     Costo total: <br>
                     <input class="form-control" type="text" name="txtCos" value="<%=c.getCostototal()%>"><br>
                     Stock<br>
                     <input class="form-control" type="text" name="txtCan" value="<%=c.getCantidadtotal()%>"><br>
                 
                 <input type="hidden" name="txtid" value="<%=c.getIdcompra()%>">
-                <input class="btn btn-primary" type="submit" name="accion" value="Actualizar"> 
-                <a href="ControladorCompra?accion=listar">Regresar</a>
+                <input class="btn btn-primary" type="submit" name="accion" value="Actualizar compra"> 
+                <a href="ControladorCompra?accion=listar1">Regresar</a>
             </form>
           </div>
           

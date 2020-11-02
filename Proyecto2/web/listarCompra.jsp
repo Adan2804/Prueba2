@@ -16,11 +16,10 @@
             <div class="row">
                 <div class="col-6"><input class="form-control mr-sm-2" type="search" placeholder="Nombre" aria-label="Search"></div>
                 <div class="col-3"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button></div>
-                <div class="col-3"><a class="btn btn-success" href="ControladorCompra?accion=add">Agregar Nuevo</a></div>
+                <div class="col-3"><a class="btn btn-success" href="ControladorCompra?accion=add1">Agregar Nuevo</a></div>
             </div>
             <div class="row">
                 <div class="col">
-
                     <br>
                     <br>
                     <table class="table table-bordered">
@@ -28,6 +27,7 @@
                             <tr>
                                 <th class="text-center">PROVEEDOR</th>
                                 <th class="text-center">FECHA</th>
+                                <th class="text-center">CANTIDAD TIPOS</th>
                                 <th class="text-center">COSTO TOTAL</th>
                                 <th class="text-center">STOCK TOTAL</th>
                                 <th class="text-center">ACCIONES</th>
@@ -45,11 +45,12 @@
                             <tr>
                                 <td class="text-center"><%= pro.getProveedor()%></td>
                                 <td class="text-center"><%= pro.getFecha().substring(0,11)%></td>
+                                <td class="text-center"><%= pro.getCantidadtipos()%></td>
                                 <td class="text-center"><%= pro.getCostototal()%></td>
                                 <td class="text-center"><%= pro.getCantidadtotal()%></td>
                                 <td class="text-center">
-                                    <a class="btn btn-warning" href="ControladorCompra?accion=editar&id=<%= pro.getIdcompra()%>">Editar</a>
-                                    <a class="btn btn-danger" href="ControladorCompra?accion=eliminar&id=<%= pro.getIdcompra()%>">Remove</a>
+                                    <a class="btn btn-warning" href="ControladorCompra?accion=editar1&id=<%= pro.getIdcompra()%>">Edit</a>
+                                    <a class="btn btn-danger" href="ControladorCompra?accion=eliminar1&id=<%= pro.getIdcompra()%>">Remove</a>
                                 </td>
                             </tr>
                             <%}%>

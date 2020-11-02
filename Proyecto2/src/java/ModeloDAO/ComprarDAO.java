@@ -30,6 +30,7 @@ public class ComprarDAO {
                 co.setIdcompra(rs.getInt("idcompra"));
                 co.setProveedor(rs.getString("proveedor"));
                 co.setFecha(rs.getString("fecha"));
+                co.setCantidadtipos(rs.getInt("cantidadtipos"));
                 co.setCostototal(rs.getDouble("costototal"));
                 co.setCantidadtotal(rs.getInt("cantidadtotal"));
                 
@@ -50,6 +51,7 @@ public class ComprarDAO {
                 c.setIdcompra(rs.getInt("idcompra"));
                 c.setProveedor(rs.getString("proveedor"));
                 c.setFecha(rs.getString("fecha"));
+                c.setCantidadtipos(rs.getInt("cantidadtipos"));
                 c.setCostototal(rs.getDouble("costototal"));
                 c.setCantidadtotal(rs.getInt("cantidadtotal"));
 
@@ -60,7 +62,12 @@ public class ComprarDAO {
     }
 
     public boolean add(Compra co) {
-       String sql="insert into compra(proveedor, fecha, costototal, cantidadtotal)values('"+co.getProveedor()+"','"+co.getFecha()+"','"+co.getCostototal()+"','"+co.getCantidadtotal()+"')";
+       String sql="insert into compra(proveedor, fecha, cantidadtipos, costototal, cantidadtotal)values('"+
+               co.getProveedor()+"','"+
+               co.getFecha()+"','"+
+               co.getCantidadtipos()+"','"+
+               co.getCostototal()+"','"+
+               co.getCantidadtotal()+"')";
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -71,7 +78,12 @@ public class ComprarDAO {
     }
 
     public boolean edit(Compra co) {
-        String sql="update compra set proveedor='"+co.getProveedor()+"',fecha='"+co.getFecha()+"',costototal="+co.getCostototal()+",cantidadtotal="+co.getCantidadtotal()+" where idcompra="+co.getIdcompra();
+        String sql="update compra set proveedor='"+co.getProveedor()+
+                "',fecha='"+co.getFecha()+
+                "',cantidadtipos='"+co.getCantidadtipos()+
+                "',costototal="+co.getCostototal()+
+                ",cantidadtotal="+co.getCantidadtotal()+
+                " where idcompra="+co.getIdcompra();
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);

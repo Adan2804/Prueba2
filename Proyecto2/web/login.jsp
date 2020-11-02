@@ -1,24 +1,33 @@
-<jsp:useBean id="msj" scope="request" class="java.lang.String"/>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>VALIDACIÓN DE USUARIO</h1>
-        <form action="scontrolador">
-            <input type="hidden" name="opcion" value="13">
-            usuario: <input type="text" name="txtusuario">
-            <br>
-            clave: <input type="text" name="txtclave">
-            <br>
-            <input type="submit" value="Validar">
-        </form>
-        <%
-            if(msj!=null)
-                out.print(msj);
-        %>
-    </body>
+
+        <div class="container mt-4 col-lg-4">
+            <div class="card">
+                <div class="car-body text-center">
+                    <form class="form-sign" action="Validar" >
+                        <div class="form-group">
+                            <h3>Login</h3>
+                        </div>
+                        <div class="form-group">
+                            <label>Usuario: </label>
+                            <input type="text" name="txtUsu" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Password: </label>
+                            <input type="text" name="txtCon" class="form-control">
+                        </div>
+                        <input type="submit" name="accion" value="ingresar" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+        </div>
+     </body>
 </html>

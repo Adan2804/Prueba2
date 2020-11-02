@@ -22,7 +22,7 @@
                     <input class="form-control" type="text" name="txtDir"><br>
                     Celular : <br>
                     <input class="form-control" type="text" name="txtCel"><br>
-                    <input class="btn btn-primary" type="submit" name="accion" value="Agregar1">
+                    <input class="btn btn-primary" type="submit" name="accion" value="Registrar">
                     <a href="index.jsp">Regresar</a>
                 </form>
             </div>

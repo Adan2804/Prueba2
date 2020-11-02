@@ -14,12 +14,14 @@
                 <form action="ControladorCompra">
                     Proveedor:<br>
                     <input class="form-control" type="text" name="txtPro"><br>
+                    Cantidad Tipos:<br>
+                    <input class="form-control" type="text" name="txtCant"><br>
                     Costo Total:<br>
                     <input class="form-control" type="text" name="txtCos"><br>
                     Stock Total: <br>
                     <input class="form-control" type="text" name="txtCan"><br>
-                    <input class="btn btn-primary" type="submit" name="accion" value="Agregar">
-                    <a href="ControladorProducto?accion=listar">Regresar</a>
+                    <input class="btn btn-primary" type="submit" name="accion" value="Agregar compra">
+                    <a href="ControladorCompra?accion=listar1">Regresar</a>
                 </form>
             </div>
         </div>
