@@ -9,6 +9,7 @@
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/listarProducto.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/error.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/listarEmpleado.jsp</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/Validar.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editRegistrocompra.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Producto.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/addCliente.jsp</file>
@@ -16,9 +17,11 @@
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editProducto.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Empleado.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/contactform/contactform.js</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/RegistroCliente.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ComprarDAO.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ProDAO.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Modelo/Compra.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/editCliente.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/ControladorCompra.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/ClienteDAO.java</file>
@@ -37,6 +40,7 @@
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/vistas/mensaje.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/ModeloDAO/EmpleadoDAO.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/Controlador.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/login.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Config/Conexion.java</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/web/administrador.jsp</file>
             <file>file:/C:/Users/User/Documents/GitHub/Proyecto-Gas/Proyecto2/src/java/Controlador/ControladorIngreso.java</file>
